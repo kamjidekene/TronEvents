@@ -1,0 +1,46 @@
+.card {
+  //   background-color: #520e39;
+  background-image: linear-gradient(
+    to right,
+    rgba(114, 57, 213, 0.302),
+    rgba(213, 58, 156, 0.237)
+  );
+
+  border-radius: 5px;
+  font-size: 1.2rem;
+  line-height: 2;
+
+  &__image {
+    height: 25rem;
+    width: 30rem;
+  }
+
+  &__img {
+    height: 100%;
+    width: 30rem;
+    object-fit: cover;
+  }
+
+  &__content {
+    padding: 2rem;
+  }
+
+  &__button {
+    text-align: center;
+    margin: 2rem auto;
+
+    & button {
+      padding: 1rem;
+      border-style: none;
+      font-family: inherit;
+      font-size: 1.3rem;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgb(31, 10, 50);
+        color: #fff;
+      }
+    }
+  }
+}

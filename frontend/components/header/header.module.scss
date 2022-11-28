@@ -1,0 +1,50 @@
+.container {
+  background-color: rgba(0, 0, 0, 1);
+  height: 8rem;
+  padding: 2rem;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(4px);
+  z-index: 99;
+  transition: 0.2s;
+}
+
+.inner {
+  margin: 0rem auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.head {
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  .head {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    height: 12rem;
+  }
+  .inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .head {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 553px) {
+  .container {
+    height: 20rem;
+  }
+}

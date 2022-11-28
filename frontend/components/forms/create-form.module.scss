@@ -1,0 +1,125 @@
+.container {
+  width: 90%;
+  margin: 0 auto 8rem;
+}
+
+.head {
+  margin-bottom: 4rem;
+}
+
+.heading {
+  text-align: center;
+  font-size: 3rem;
+
+  &__para {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+  }
+}
+
+.form {
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+
+  &__btn {
+    margin: auto;
+    margin-top: 4rem;
+  }
+
+  &__error {
+    font-family: inherit;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 1rem;
+    background-color: transparent;
+    border-style: none;
+    color: #fff;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    border-radius: 3px;
+    margin-bottom: 1.3rem;
+  }
+}
+
+.inputContainer {
+  margin-top: 2rem;
+  width: 46%;
+  position: relative;
+  margin-bottom: 2.5rem;
+
+  &__label {
+    font-family: inherit;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 1.3rem;
+    color: #fff;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &__input {
+    font-family: inherit;
+    border: 0;
+    border-bottom: 1px solid #555;
+    background: transparent;
+    width: 100%;
+    padding: 8px 0 5px 0;
+    font-size: 1.5rem;
+    color: #fff;
+
+    &:focus {
+      border: none;
+      outline: none;
+      border-bottom: 1px solid #e74c3c;
+    }
+  }
+  &__input:focus ~ label,
+  &__input:valid ~ label {
+    top: -12px;
+    font-size: 1.1rem;
+  }
+}
+
+.fullContainer,
+.btnContainer {
+  width: 100%;
+}
+
+.btnContainer {
+  margin: 6rem auto 2rem;
+  &__btn {
+    padding: 1rem;
+    width: 100%;
+    font-family: inherit;
+    font-size: 1.4rem;
+    color: #fff;
+    border-radius: 5px;
+    border-style: none;
+    // background-color: rgb(20, 1, 35);
+    background-image: linear-gradient(
+      to right,
+      rgba(114, 57, 213, 0.869),
+      #d53a9cc1
+    );
+    cursor: pointer;
+
+    &:hover {
+      background-image: linear-gradient(
+        to right,
+        #d53a9cc1,
+        rgba(114, 57, 213, 0.869)
+      );
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .inputContainer {
+    width: 100%;
+  }
+}

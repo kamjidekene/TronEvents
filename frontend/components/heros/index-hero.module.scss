@@ -1,0 +1,145 @@
+.container {
+  background-color: rgb(0, 0, 0);
+  background-image: linear-gradient(
+    to bottom,
+    rgb(0, 0, 0),
+    rgba(140, 25, 228, 0.4)
+  );
+  min-height: calc(100vh - 80px);
+}
+.inner {
+  margin: 0 auto 8rem;
+  padding-top: 2rem;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.innerLeft {
+  padding-top: 8rem;
+  width: 50%;
+}
+
+.heading {
+  font-size: 5rem;
+  font-weight: 400;
+  & span {
+    background: -webkit-linear-gradient(#743ad5, #d53a9d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__sub {
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.765);
+    font-size: 2rem;
+  }
+}
+
+.button {
+  margin: 2.5rem 0;
+  display: flex;
+  gap: 2rem;
+
+  &__btn {
+    padding: 1rem;
+    // width: 15rem;
+    font-family: inherit;
+    font-size: 1.4rem;
+    color: #fff;
+    border-radius: 10px;
+    border-style: none;
+    // background-color: rgb(20, 1, 35);
+    background-image: linear-gradient(
+      to right,
+      rgba(114, 57, 213, 0.869),
+      #d53a9cc1
+    );
+    cursor: pointer;
+
+    &:hover {
+      background-image: linear-gradient(
+        to right,
+        rgba(213, 58, 156, 0.757),
+        rgba(114, 57, 213, 0.869)
+      );
+    }
+  }
+
+  &__btnNbg {
+    padding: 1rem;
+    // width: 15rem;
+    font-family: inherit;
+    font-size: 1.4rem;
+    border-radius: 10px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.857);
+    border-style: none;
+
+    &:hover {
+      background-image: linear-gradient(
+        to right,
+        rgba(114, 57, 213, 0.869),
+        #d53a9cc1
+      );
+    }
+  }
+}
+
+.image {
+  width: 100%;
+  height: 50rem;
+}
+
+@media only screen and (max-width: 1400px) {
+  .inner {
+    width: 90%;
+  }
+
+  .heading {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .inner {
+    width: 90%;
+  }
+  .innerLeft {
+    padding-top: 20rem;
+    width: 100%;
+  }
+  .innerRight {
+    display: none;
+  }
+  .heading {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .innerLeft {
+    // padding-top: 5rem;
+    width: 100%;
+  }
+  .innerRight {
+    display: none;
+  }
+  .heading {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .innerLeft {
+    padding-top: 5rem;
+    width: 100%;
+  }
+
+  .button {
+    display: flex;
+    flex-direction: column;
+  }
+}

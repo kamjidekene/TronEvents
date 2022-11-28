@@ -1,0 +1,33 @@
+.container {
+  margin: 12rem auto 8rem;
+  width: 90%;
+}
+
+.heading {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.partners {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__img {
+    height: 4rem;
+    width: 100%;
+  }
+
+  &__name {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,46 @@
+.container {
+  margin: 12rem auto 8rem;
+  width: 90%;
+}
+
+.heading {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.content {
+  margin-top: 6rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+
+  &__row {
+    padding: 2rem;
+    background: rgba(59, 22, 88, 0.52);
+    margin-bottom: 1rem;
+    border-radius: 10px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+
+    & h3 {
+      font-size: 1.8rem;
+    }
+  }
+  &__para {
+    margin-top: 1rem;
+    line-height: 1.6;
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,35 @@
+.btn {
+  color: #fff;
+  font-family: inherit;
+  font-size: 1.4rem;
+  padding: 0.7rem 0.8em;
+  background-color: transparent;
+  background: #000;
+  position: relative;
+  border-radius: 10px;
+  $border: 3px;
+  background-clip: padding-box; /* !importanté */
+  border: solid $border transparent; /* !importanté */
+  cursor: pointer;
+
+  & span {
+    vertical-align: middle;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -$border; /* !importanté */
+    border-radius: inherit; /* !importanté */
+    background: linear-gradient(to left, #743ad5, #d53a9d);
+  }
+
+  &:hover {
+    padding: 0.8rem 1.5rem;
+  }
+}

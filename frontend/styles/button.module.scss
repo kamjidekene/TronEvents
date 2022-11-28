@@ -1,0 +1,24 @@
+.btn {
+  padding: 1rem;
+  // width: 100%;
+  font-family: inherit;
+  font-size: 1.4rem;
+  color: #fff;
+  border-radius: 5px;
+  border-color: transparent;
+  // background-color: rgb(20, 1, 35);
+  background-image: linear-gradient(
+    to right,
+    rgba(114, 57, 213, 0.869),
+    #d53a9cc1
+  );
+  cursor: pointer;
+
+  &:hover {
+    background-image: linear-gradient(
+      to right,
+      #d53a9cc1,
+      rgba(114, 57, 213, 0.869)
+    );
+  }
+}

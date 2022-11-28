@@ -1,0 +1,31 @@
+.container {
+  background-color: rgb(83, 5, 143);
+  // background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(83, 5, 143));
+  background-image: url(../public/eventSection.svg);
+  background-size: cover;
+}
+
+.content {
+  margin: 0 auto;
+  padding: 8rem 0;
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 4rem;
+}
+
+.dashSection {
+  margin: 0 auto;
+  width: auto;
+  padding: 1rem;
+  background-color: rgba(19, 18, 19, 0.522);
+  backdrop-filter: blur(2px);
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 500px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+}

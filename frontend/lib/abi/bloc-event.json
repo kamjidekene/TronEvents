@@ -1,0 +1,211 @@
+[
+  { "inputs": [], "name": "CheckedIn", "type": "error" },
+  { "inputs": [], "name": "InsufficentBalance", "type": "error" },
+  { "inputs": [], "name": "NotRegistered", "type": "error" },
+  { "inputs": [], "name": "NotTicketOwner", "type": "error" },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "eventId",
+        "type": "uint256"
+      }
+    ],
+    "name": "CreateEvent",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "_eventId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "participantAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "eventCheckInStatus",
+        "type": "bool"
+      }
+    ],
+    "name": "EventCheckIn",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "eventId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "participantAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint48",
+        "name": "currentTag",
+        "type": "uint48"
+      }
+    ],
+    "name": "PurchasedTicket",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "eventId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "participantAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint48",
+        "name": "eventTag",
+        "type": "uint48"
+      }
+    ],
+    "name": "TransferTicketOwnership",
+    "type": "event"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "name": "allEvents",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "creatorAddress",
+        "type": "address"
+      },
+      { "internalType": "uint48", "name": "maxParticipants", "type": "uint48" },
+      {
+        "internalType": "uint48",
+        "name": "registeredParticipants",
+        "type": "uint48"
+      },
+      { "internalType": "uint256", "name": "ticketAmount", "type": "uint256" },
+      { "internalType": "uint256", "name": "amoutPaid", "type": "uint256" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_eventId", "type": "uint256" }
+    ],
+    "name": "buyTicket",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_eventId", "type": "uint256" },
+      { "internalType": "address", "name": "_address", "type": "address" },
+      { "internalType": "uint32", "name": "_eventTag", "type": "uint32" }
+    ],
+    "name": "checkInEventAttendees",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint48",
+        "name": "maxNumberOfParticipants",
+        "type": "uint48"
+      },
+      { "internalType": "uint256", "name": "_amount", "type": "uint256" }
+    ],
+    "name": "createEvent",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_eventId", "type": "uint256" },
+      { "internalType": "uint256", "name": "_participants", "type": "uint256" }
+    ],
+    "name": "fetchEventParticipants",
+    "outputs": [
+      {
+        "components": [
+          { "internalType": "uint48", "name": "eventTag", "type": "uint48" },
+          {
+            "internalType": "uint48",
+            "name": "datePurchased",
+            "type": "uint48"
+          },
+          {
+            "internalType": "address",
+            "name": "participantAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "ticketTransferStatus",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "eventCheckInStatus",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint40",
+            "name": "ticketTransferDate",
+            "type": "uint40"
+          }
+        ],
+        "internalType": "struct EventFactory.EventTracker[]",
+        "name": "addresses",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "index",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_eventId", "type": "uint256" },
+      { "internalType": "address", "name": "_newAddress", "type": "address" },
+      { "internalType": "uint32", "name": "_eventTag", "type": "uint32" }
+    ],
+    "name": "transferTicketOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
